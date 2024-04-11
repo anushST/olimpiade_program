@@ -12,7 +12,7 @@ class Task(models.Model):
     """
 
     question = models.TextField()
-    answer = models.TextField(blank=True)
+    answer = models.TextField(default='Нет ещё ответа!!!!', blank=True)
 
     def save(self, *args, **kwargs) -> None:
         """Save instance to database.
