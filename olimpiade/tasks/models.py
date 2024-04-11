@@ -21,7 +21,7 @@ class Task(models.Model):
         """
         if self.answer != '':
             self.question = '✔ ' + self.question
-        return super().save(args, kwargs)
+        return super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         """Return what to represent when call str() method to object.
